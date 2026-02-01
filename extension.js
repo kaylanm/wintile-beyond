@@ -225,7 +225,7 @@ function unMaximizeIfMaximized(app) {
     if (app.maximized_horizontally || app.maximized_vertically)
         if (SHELL_VERSION >= 49.0) {
             app.unmaximize();
-            set_unmaximize_flags(Meta.MaximizeFlags.BOTH);
+            app.set_unmaximize_flags(Meta.MaximizeFlags.BOTH);
         } else
             app.unmaximize(Meta.MaximizeFlags.BOTH);
 }
